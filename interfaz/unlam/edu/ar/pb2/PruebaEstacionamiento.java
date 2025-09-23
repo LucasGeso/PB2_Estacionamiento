@@ -26,14 +26,14 @@ public class PruebaEstacionamiento {
 			ubicarVehiculo();
 			break;
 		case RETIRAR_VEHICULO:
-			returarVehiculo();
+			retirarVehiculo();
 			break;
 		default:
 			break;
 		}
 	}
 
-	private static void returarVehiculo() {
+	private static void retirarVehiculo() {
 		// TODO Auto-generated method stub
 		
 	}
