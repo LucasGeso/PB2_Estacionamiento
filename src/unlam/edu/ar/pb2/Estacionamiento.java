@@ -12,8 +12,19 @@ public class Estacionamiento {
 	public boolean agregarUnCoche(Coche nuevo) {
 		for(int i=0; i<cocheras.length;i++) {
 			for(int j=0;j<cocheras[i].length;j++) {
-				if(cocheras[i][j]==null) {
+				if(cocheras[i][j]==null && !existeCoche(nuevo)){
 					cocheras[i][j] = nuevo;
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	private boolean existeCoche(Coche nuevo) {
+		for(int i=0; i<cocheras.length;i++) {
+			for(int j=0;j<cocheras[i].length;j++) {
+				if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(nuevo.getPatente().toUpperCase())) {
 					return true;
 				}
 			}
@@ -25,7 +36,7 @@ public class Estacionamiento {
 		Coche buscado = null;
 		for(int i=0; i<cocheras.length;i++) {
 			for(int j=0;j<cocheras[i].length;j++) {
-				if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente)) {
+				if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente.toUpperCase())) {
 					buscado = cocheras[i][j];
 					break;
 				}
@@ -37,7 +48,7 @@ public class Estacionamiento {
 	public boolean retirarCoche(String patente) {
 		for(int i=0; i<cocheras.length;i++) {
 			for(int j=0;j<cocheras[i].length;j++) {
-		if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente)) {
+		if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente.toUpperCase())) {
 			cocheras[i][j] = null;
 			return true;
 		}

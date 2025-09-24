@@ -7,13 +7,21 @@ import org.junit.jupiter.api.Test;
 
 class CocheTest {
 
+	Coche prueba;
+	
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp(){
+		prueba = new Coche("Peugeot 206", "ITD734");
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void queSePuedaCrearUnCoche() {
+		assertNotNull(prueba);;
+	}
+	
+	@Test
+	void queSePuedaCompararLaPatente() {
+		assertEquals(prueba.getPatente(),"ITD734");
 	}
 
 }

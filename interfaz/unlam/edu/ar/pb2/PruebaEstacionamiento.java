@@ -41,6 +41,9 @@ public class PruebaEstacionamiento {
 			break;
 		}
 		}while(opcion!=MenuEstacionamiento.SALIR);
+		
+		System.out.println("Muchas gracias por venir, te esperamos la próxima!!!");
+		teclado.close();
 	}
 
 	private static void retirarVehiculo(Estacionamiento est) {
@@ -57,5 +60,7 @@ public class PruebaEstacionamiento {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }
