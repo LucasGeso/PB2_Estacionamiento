@@ -21,23 +21,27 @@ public class Estacionamiento {
 		return false;
 	}
 	
-	public String encontraCoche(String patente) {
-		String cadena = "";
+	public Coche encontraCoche(String patente) {
+		Coche buscado = null;
 		for(int i=0; i<cocheras.length;i++) {
 			for(int j=0;j<cocheras[i].length;j++) {
 				if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente)) {
-					cadena = "Fila:" + i + "Columna: " + j;
+					buscado = cocheras[i][j];
 					break;
 				}
 			}
 		}
-		return cadena;
+		return buscado;
 	}
 	
-	public boolean retirarCoche(String patente, int fila, int columna) {
-		if(cocheras[fila][columna]!=null && cocheras[fila][columna].getPatente().equals(patente)) {
-			cocheras[fila][columna] = null;
+	public boolean retirarCoche(String patente) {
+		for(int i=0; i<cocheras.length;i++) {
+			for(int j=0;j<cocheras[i].length;j++) {
+		if(cocheras[i][j]!=null && cocheras[i][j].getPatente().equals(patente)) {
+			cocheras[i][j] = null;
 			return true;
+		}
+			}
 		}
 		return false;
 	}

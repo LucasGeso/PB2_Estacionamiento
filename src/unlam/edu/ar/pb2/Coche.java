@@ -4,17 +4,19 @@ import java.util.Objects;
 
 public class Coche {
 	private String marca;
-	private int modelo;
 	private String patente;
 	
-	public Coche(String marca, int modelo, String patente) {
+	public Coche(String marca, String patente) {
 		this.marca = marca;
-		this.modelo = modelo;
-		this.patente = patente;
+		this.patente = patente.toUpperCase();
 	}
 
 	public String getPatente() {
 		return patente;
+	}
+	
+	public String getMarca() {
+		return marca;
 	}
 
 	@Override
