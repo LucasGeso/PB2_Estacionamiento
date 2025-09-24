@@ -2,7 +2,7 @@ package unlam.edu.ar.pb2;
 
 public enum MenuEstacionamiento {
 
-	INGRESO_VEHICULOS("0 - Ingresar un vehículo"),UBICAR_VEHICULO("1 - Buscar un vehículo"), RETIRAR_VEHICULO("2 - Retirar un vehículo"), SALIR("3 - Salir");
+	INGRESO_VEHICULOS("1 - Ingresar un vehículo"),UBICAR_VEHICULO("2 - Buscar un vehículo"), RETIRAR_VEHICULO("3 - Retirar un vehículo"), SALIR("4 - Salir");
 	
 	private String texto;
 	
